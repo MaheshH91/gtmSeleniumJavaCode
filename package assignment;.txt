@@ -1,0 +1,65 @@
+package assignment;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Assignment71 {
+
+    public static void main(String[] args) throws AWTException {
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        String url = System.getProperty("user.dir") + "\\learningHTML1.html";
+
+        driver.get("file://" + url);
+
+        WebElement userName = driver.findElement(By.xpath("/html/body/input[1]"));
+        userName.sendKeys("India@gmail.com");
+
+        WebElement hindTxtBox = driver.findElement(By.xpath("/html/body/input[2]"));
+        hindTxtBox.sendKeys("CountryName@gmail.com");
+
+        WebElement passwd = driver.findElement(By.xpath("/html/body/input[3]"));
+        passwd.sendKeys("India@1234");
+
+        WebElement fName = driver.findElement(By.xpath("/html/body/form[1]/input[1]"));
+        fName.sendKeys("Mahesh");
+
+        WebElement submitButton = driver.findElement(By.xpath("/html/body/form[1]/input[3]"));
+        //submitButton.click();
+
+        WebElement boyCheckBox = driver.findElement(By.xpath("/html/body/form[2]/input[1]"));
+        boyCheckBox.click();
+
+        WebElement maleRadioBtn = driver.findElement(By.xpath("/html/body/input[4]"));
+        maleRadioBtn.click();
+
+        WebElement readyToRelocate = driver.findElement(By.xpath("/html/body/input[6]"));
+        readyToRelocate.click();
+
+        WebElement knowAboutUs = driver.findElement(By.xpath("/html/body/a"));
+        
+        Actions actions = new Actions(driver);
+        actions.contextClick(knowAboutUs).perform();
+        
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.keyPress(KeyEvent.VK_ENTER);
+
+        Set<String> allWindows = driver.getWindowHandles();
+        String originalWindow = driver.getWindowHandle();
+        ArrayList<String> tabs = new ArrayList<>(allWindows);
+        driver.switchTo().window(tabs.get(1));
+        driver.close();
+        driver.switchTo().defaultContent();
+        
+        driver.quit();
+    }
+}

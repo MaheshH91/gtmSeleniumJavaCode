@@ -1,0 +1,14 @@
+Absolute Xpath
+1. Absolute xpath starts from root node.
+2. it starts with /
+3. In Absolute xpath we use only tags/node
+4. Example. 
+   /html/body/div[1]/div[2]/form[2]/input 
+
+Relative xpath
+1. Relative xpath directly jumps to element on DOM
+2. It starts with //
+3. In relative xpath we use attributes
+4. //*[@id='email']
+
+

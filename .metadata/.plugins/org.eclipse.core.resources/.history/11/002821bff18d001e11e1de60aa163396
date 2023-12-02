@@ -1,0 +1,16 @@
+package assert_Keyword;
+
+import java.util.Scanner;
+
+public class Assert_Keyword_Prog {
+
+	public static void main(String[] args) {
+
+		Scanner sc= new Scanner(System.in);
+		
+		int rams_age = sc.nextInt();
+		assert rams_age >18;
+		
+	}
+
+}

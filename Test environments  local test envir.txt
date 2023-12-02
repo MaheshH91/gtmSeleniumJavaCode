@@ -1,0 +1,21 @@
+Test environments:  local test environment functional testing,  regression environments for  integration and regression tesing , prod and pre prod environments, 
+
+New environment for fresh customers and upgrade environment for existing customers
+
+Api teating Curl comments , postman 
+
+Test case writing thinking to cover all test scenarios like positive negative boundary  Ecp    Etc
+
+Test data to cover all test scenario , small set and large data sets  as per need
+
+Defect reporting  and analysis if given as not a bug or  can not reproduce then debugging and analysing level by providing mutiple logs screenshot video and steps to reproduce info
+
+Task management for time crunch  like high pro test cases execution first
+
+Sql queries  are must : joins  and sql key words count, distinct count, min max sum , order by group by
+
+Basic linus commands : ls cat cp scp awk mv top wc ……etc
+
+Added adventage of having knowlede of automation concept test ng  maven annotation , locator identification etc
+
+Explain your work done mentioned in resume

@@ -1,0 +1,25 @@
+package amzn.source;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Amzn_LoginPage {
+
+	@FindBy(name = "email")
+	WebElement username;
+
+	@FindBy(id = "continue")
+	WebElement continueBtn;
+
+	@FindBy(xpath = "//input[@id='ap_password']")
+	WebElement password;
+
+	@FindBy(id = "signInButton")
+	WebElement loginButton;
+
+	//Step2
+	public void userName_() {
+		username.sendKeys("holkarmahesh1@gmail.com");
+	}
+	public void
+}

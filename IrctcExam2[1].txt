@@ -1,0 +1,74 @@
+package Practice;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class IrctcExam2 {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		System.setProperty(
+	            "webdriver.edge.driver",
+	            "C:\\Users\\nsmaddul\\Documents\\Manish\\msedgedriver.exe");
+	EdgeDriver driver=new EdgeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.get("https://www.irctc.co.in/nget/train-search");
+
+		driver.findElement(By.xpath("(//input[@role='searchbox'])[1]")).sendKeys("BENGALURU");
+		Thread.sleep(4000);
+		List<WebElement> from=driver.findElements(By.xpath("//ul[@role='listbox']/li/span"));
+	   for(WebElement fr:from) {
+		   System.out.println(fr.getText());
+		  if( fr.getText().toUpperCase().contains("BENGALURU"))
+		  {
+			  fr.click();
+			  break;
+		  }
+	}
+
+		driver.findElement(By.xpath("(//input[@role='searchbox'])[2]")).sendKeys("DELHI");
+		Thread.sleep(4000);
+		List<WebElement> to=driver.findElements(By.xpath("//ul[@role='listbox']/li/span"));
+	   for(WebElement t:to) {
+		   System.out.println(t.getText());
+		  if( t.getText().toUpperCase().contains("DELHI"))
+		  {
+			  t.click();
+			  break;
+		  }
+	}
+	   
+	   WebElement date=driver.findElement(By.xpath("(//input[@type='text'])[3]"));
+		
+		date.click();
+		driver.findElement(By.xpath("//span[contains(@class,'ui-datepicker-next-icon')]")).click();
+		driver.findElement(By.xpath("//a[.='31']")).click();
+
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//*[@id='journeyQuota']/div/div[3]/span")).click();
+		
+
+		List<WebElement> categories=driver.findElements(By.xpath("//div[contains(@class,'ui-dropdown-items')]/ul/p-dropdownitem/li"));
+
+
+		Thread.sleep(4000);
+		categories.get(0).click();
+		System.out.println(categories);
+
+		Thread.sleep(5000);
+
+		
+		driver.findElement(By.xpath("//button[@label='Find Trains']")).click();
+		Thread.sleep(3000);
+	driver.quit();
+
+	}
+
+}

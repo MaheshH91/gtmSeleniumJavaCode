@@ -1,0 +1,5 @@
+package amzn.source;
+
+public class Amzn_CartPage {
+
+}

@@ -1,0 +1,21 @@
+Q . log in to facebook using automations 
+
+return type of findElement is WebElement.
+
+NoSuchElementException - Selenium Exception
+
+id locator 
+driver.findElement(By.id("uname").sendKeys("amhesh@gmail.com");
+
+name locator 
+driver.findElement(By.name("password").sendKeys("abc@1243")
+
+Assignment :
+please login to facebook   
+
+LinkText:
+The default tag name for all  the links available over the internet/website is <a> ancher tag
+
+Assignmet
+Launch google.com and click on gmail link
+ 

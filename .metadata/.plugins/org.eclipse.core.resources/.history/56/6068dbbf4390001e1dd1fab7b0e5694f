@@ -1,0 +1,24 @@
+package dataProvider_pkg;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+// facebook signup 4 value fname, lname, mobileNo,pass use 5 records
+public class DataproviderAss3 {
+
+@DataProvider(name="dataInput")
+public Object[][] method1(){
+	return new Object[][] {{"Mahesh"},{"Riya"},{"Priya"},{"Sonu"},{"dada"},
+		{"Raj"},{"Didi"},{"Gayatri"},{"Shree"},{"Anku"}};
+
+}
+
+@Test(dataProvider = "dataInput")
+public void Login(String input) {
+	String Checkname ="Riya";
+	if(input.equals(Checkname)) {
+		System.out.println("The input is"+input+" is present in the data provider input");
+	}else {
+		System.out.println("The input is"+input+" is NOT present in the data provider input");
+	}
+}
+}

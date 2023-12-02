@@ -1,0 +1,19 @@
+Launch Amazon Application and Select books and Enter human in text box and press enter
+
+This should done using select class
+
+Select s1 = new Select(WebElement)
+s1.selectByIndex
+s2.selectByVisibleText
+s1.selectByValue
+
+
+How to Calculate the number of drop down we have?
+How to print all the values that are in the dropdown?
+
+How to handle Autosuggestions? IMP
+
+
+Launch google search India and Select 4 option?
+
+Write xpath minimum 3 generation

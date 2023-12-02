@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Integration Suite">
+  <test thread-count="5" name="Integration Test">
+    <classes>
+      <class name="testNgOne.TestNg_Para_All_Ass"/>
+      <class name="testNgOne.Two2"/>
+      <class name="testNgOne.FiveCase"/>
+      <class name="testNgOne.Reporter_Demo"/>
+      <class name="testNgOne.One"/>
+      <class name="testNgOne.TestNg_InvocationCount"/>
+      <class name="testNgOne.TestNg_Para_Timeout"/>
+      <class name="testNgOne.Three"/>
+      <class name="testNgOne.TestNg_Enabled_Prog"/>
+      <class name="testNgOne.Two"/>
+      <class name="testNgOne.Priority_Prog"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

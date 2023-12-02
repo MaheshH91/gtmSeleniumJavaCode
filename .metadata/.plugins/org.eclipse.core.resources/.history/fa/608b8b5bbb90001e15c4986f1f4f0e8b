@@ -1,0 +1,24 @@
+package dataProvider_pkg;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class DataproviderAss3 {
+
+  @DataProvider(name = "cricketers")
+  public Object[][] method1() {
+    return new Object[][] {
+      {"Rohit Sharma"}, {"KL Rahul"}, {"Virat Kohli"}, {"Suryakumar Yadav"},
+      {"Shreyas Iyer"}, {"Rishabh Pant"}, {"Hardik Pandya"}, {"Ravindra Jadeja"},
+      {"Mohammed Shami"}, {"Bhuvneshwar Kumar"}, {"Jasprit Bumrah"}
+    };
+  }
+
+  @Test(dataProvider = "cricketers")
+  public void testMethood(String cricketerName) {
+    String checkName = "Rishabh Pant";
+    if (cricketerName.equals(checkName)) {
+      System.out.println(cricketerName + " is present in the data provider input.");
+    } 
+  }
+}

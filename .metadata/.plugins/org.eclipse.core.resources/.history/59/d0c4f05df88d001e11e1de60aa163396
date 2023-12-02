@@ -1,0 +1,12 @@
+package assert_Keyword;
+
+public class Assert_Keyword_Prog {
+
+	public static void main(String[] args) {
+
+		String name = "Mahessh";
+		assert name.length()==7;
+		System.out.println(name.concat(" Holkar"));
+	}
+
+}

@@ -1,0 +1,36 @@
+package fb_source;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+
+public class Fb_login {
+
+	// locate each element with @FindBy
+	// Create separate methods
+	// initialize each elements
+	
+	ChromeDriver driver;
+	
+	@FindBy(id="email")
+	WebElement username;
+	
+	@FindBy(name="pass")
+	WebElement password;
+	
+	@FindBy(name="login")
+	WebElement login_button;
+	
+	public void userName() {
+		username.sendKeys("holkarmahesh1@gmail.com");
+		
+	}
+	public void passWord_() {
+		password.sendKeys("holkarmahesh1@gmail.com");
+		
+	}
+	public void loginButton() {
+		login_button.click();
+		
+	}
+}
